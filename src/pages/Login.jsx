@@ -1,7 +1,8 @@
 // src/pages/Login.jsx
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../supabase/client';
+import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -41,7 +42,7 @@ function Login() {
         {error && <p className="error">{error}</p>}
       </form>
       <p>
-        Don't have an account? <a href="/signup">Sign up</a>
+        Don't have an account? <Link to="/signup">Sign up</Link>
       </p>
     </div>
   );
